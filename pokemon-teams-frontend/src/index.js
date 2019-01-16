@@ -1,7 +1,12 @@
+/*****************************************************************************
+  * Global Variables and data
+*****************************************************************************/
+
 const BASE_URL = "http://localhost:3000"
 const TRAINERS_URL = `${BASE_URL}/trainers`
 const POKEMONS_URL = `${BASE_URL}/pokemons`
 let allTrainers = []
+//const ALL_TRAINERS = []
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -35,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /*******************************************************************************
-  * Helper Functions
+  * Helper Functions PURE!
 *******************************************************************************/
 
 const renderAllTrainers = () => {
@@ -62,6 +67,10 @@ const trainerCardHTML = (trainer) => {
   `
   return returnHTML
 }
+
+/*******************************************************************************
+  * Helper Functions IMPURE!
+*******************************************************************************/
 
 const addPokemon = (id) => {
   let data={"trainer_id": id}
